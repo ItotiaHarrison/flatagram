@@ -33,45 +33,45 @@ Write your code in the `src/index.js` file. The base URL for your API will be
 
 As a user, I can:
 
-- See the image received from the server, including its title, likes and
-  comments when the page loads. You will need to make a GET request to the
-  following endpoint to retrieve the image data, along with its associated
-  comments:
+1. See the image received from the server, including its title, likes and
+   comments when the page loads. You will need to make a GET request to the
+   following endpoint to retrieve the image data, along with its associated
+   comments:
 
-  ```txt
-  GET /images/1
+   ```txt
+   GET /images/1
 
-  Example Response:
-  {
-    "id": 1,
-    "title": "Woofing those bugs away",
-    "likes": 0,
-    "image": "./assets/coder-dog.png",
-    "comments": [
-      {
-        "id": 1,
-        "imageId": 1,
-        "content": "What a cute dog!"
-      },
-      {
-        "id": 2,
-        "imageId": 1,
-        "content": "He's got a nose for bugs!"
-      },
-      {
-        "id": 3,
-        "imageId": 1,
-        "content": "Woof!"
-      }
-    ]
-  }
-  ```
+   Example Response:
+   {
+     "id": 1,
+     "title": "Woofing those bugs away",
+     "likes": 0,
+     "image": "./assets/coder-dog.png",
+     "comments": [
+       {
+         "id": 1,
+         "imageId": 1,
+         "content": "What a cute dog!"
+       },
+       {
+         "id": 2,
+         "imageId": 1,
+         "content": "He's got a nose for bugs!"
+       },
+       {
+         "id": 3,
+         "imageId": 1,
+         "content": "Woof!"
+       }
+     ]
+   }
+   ```
 
-- Click on the heart icon to increase image likes on the page. **No persistence is
-  needed** for the core deliverables.
+2. Click on the heart icon to increase image likes on the page. **No persistence
+   is needed** for the core deliverables.
 
-- Add a new comment to the page when the comment form is submitted. **No
-  persistence is needed** for the core deliverables.
+3. Add a new comment to the page when the comment form is submitted. **No
+   persistence is needed** for the core deliverables.
 
 ## Advanced Deliverables
 
