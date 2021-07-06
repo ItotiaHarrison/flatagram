@@ -1,6 +1,8 @@
 # Flatagram
 
-Today you'll be building an app for viewing, liking, and commenting on a single picture. You will be using a local API and building out the frontend for our app, Flatagram.
+Today you'll be building an app for viewing, liking, and commenting on a single
+picture. You will be using a local API and building out the frontend for our
+app, Flatagram.
 
 ## Demo
 
@@ -29,7 +31,7 @@ Then, open the `index.html` file on your browser to run the application.
 Write your code in the `src/index.js` file. The base URL for your API will be
 [http://localhost:3000](http://localhost:3000).
 
-## Core Deliverable
+## Deliverables
 
 As a user, I can:
 
@@ -68,96 +70,7 @@ As a user, I can:
    ```
 
 2. Click on the heart icon to increase image likes on the page. **No persistence
-   is needed** for the core deliverables.
+   is needed**.
 
 3. Add a new comment to the page when the comment form is submitted. **No
-   persistence is needed** for the core deliverables.
-
-## Advanced Deliverables
-
-These deliverables are not required to pass the code challenge, but if you have
-the extra time, or even after the code challenge, they are a great way to
-stretch your skills.
-
-> Note: If you are going to attempt these advanced deliverables, please be sure
-> to have a working commit with all the Core Deliverables first!
-
-As a user, I can:
-
-- Persist the number of likes when the heart icon is clicked. You will need to
-  make PATCH request to this endpoint with the updated number of likes:
-
-  ```txt
-  PATCH /images/1
-
-  Headers:
-  Content-Type: application/json
-
-  Body:
-  {
-    "likes": 1
-  }
-
-  Example Response:
-  {
-    "id": 1,
-    "title": "Woofing those bugs away",
-    "likes": 1,
-    "image": "./assets/coder-dog.png"
-  }
-  ```
-
-- Downvote an image. You will need to make PATCH request to this endpoint with
-  the updated number of likes:
-
-  ```txt
-  PATCH /images/1
-
-  Headers:
-  Content-Type: application/json
-
-  Body:
-  {
-    "likes": 0
-  }
-
-  Example Response:
-  {
-    "id": 1,
-    "title": "Woofing those bugs away",
-    "likes": 1,
-    "image": "./assets/coder-dog.png"
-  }
-  ```
-
-- Persist new comments. You will need to make a POST request to this endpoint
-  with the image ID and the new comment:
-
-  ```txt
-  POST /comments
-
-  Headers:
-  Content-Type: application/json
-
-  Body:
-  {
-    "imageId": 1,
-    "content": "New comment!"
-  }
-
-  Example Response:
-  {
-    "id": 4,
-    "imageId": 1,
-    "content": "New comment!"
-  }
-  ```
-
-- Delete a comment. You will have to make a DELETE request to this endpoint with the **comment** ID:
-
-  ```txt
-  DELETE /comments/:id
-
-  Example Response:
-  {}
-  ```
+   persistence is needed**.
