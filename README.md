@@ -74,3 +74,95 @@ As a user, I can:
 
 3. Add a new comment to the page when the comment form is submitted. **No
    persistence is needed**.
+
+### Bonus Deliverables
+
+These bonus deliverables are here if you want an extra challenge and won't
+affect your score. **Make sure to commit your work to save your progress before
+attempting the bonus deliverables!**
+
+As a user, I can:
+
+1. Remove a comment from the page when it is clicked. (Note: no persistence is
+   needed; it's fine if the comment shows up again when the page is refreshed)
+
+2. Click the title of the image to toggle whether or not the image is being
+   displayed. Clicking once on the title of the image (the `h2#card-title`
+   element) will hide the image element visually. Clicking on the title
+   again will display the image once more.
+
+3. Click the image and see a new random image of a dog. Make a GET request to
+   this API to request a random dog image:
+   [https://dog.ceo/api/breeds/image/random](https://dog.ceo/api/breeds/image/random)
+   Then replace the image of the dog with the new random image returned by the
+   API.
+
+### Extra Bonus
+
+These extra bonus deliverables involve using `fetch` to update data on the
+`json-server` backend by using `POST`, `PATCH`, and `DELETE` requests. These are
+meant for an extra, extra challenge and won't affect your grade. **Make sure to
+commit your work to save your progress before attempting the extra bonus
+deliverables!**
+
+1. When a user adds a new comment to the page using the comment form, in
+   addition to having the comment show up on the page, it should **also** be
+   saved to the server. You will need to make a request that follows this
+   structure:
+
+    ```txt
+    POST /comments
+
+    Request Headers: {
+      Content-Type: application/json
+    }
+
+    Request Body: {
+      "imageId": 1,
+      "content": "your comment here"
+    }
+
+    ----
+
+    Example Response: {
+      "id": 4,
+      "imageId": 1,
+      "content": "your comment here"
+    }
+    ```
+
+2. When a user deletes a comment by clicking it, in addition to having the
+   comment removed from the page, it should **also** be removed on the server.
+   You will need to make a request that follows this structure:
+
+    ```txt
+    DELETE /comments/:id
+
+    ----
+
+    Example Response: {}
+    ```
+
+3. When a user gets a new random dog image by clicking it, in addition to
+   displaying the new image on the page, it should **also** be updated on the
+   server. You will need to make a request that follows this structure:
+
+    ```txt
+    PATCH /images/1
+
+    Request Headers: {
+      Content-Type: application/json
+    }
+
+    Request Body: {
+      "image": "new dog image url here"
+    }
+    ----
+
+    Example Response: {
+      "id": 1,
+      "title": "Woofing those bugs away",
+      "likes": 0,
+      "image": "new dog image url here"
+    }
+    ```
