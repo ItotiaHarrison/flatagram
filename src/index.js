@@ -1,7 +1,7 @@
 // write your code here
+
 let cardinfo;
 function cardRender(card){
-    // console.log(card)
     cardinfo = card
     cardTitleTag = document.querySelector('#card-title'),
     cardImageTag = document.querySelector('#card-image'),
@@ -50,7 +50,7 @@ cardCommentFormTag.addEventListener('submit', (e) => {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(card)
     })
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => console.log(data))
     .catch(err => console.log(`Error: ${err}`));
 
@@ -69,9 +69,9 @@ cardCommentFormTag.addEventListener('submit', (e) => {
 };
 
 
-// document.addEventListener("DOMContentLoaded", ()=> {
-//     cardRender();
-// })
+document.addEventListener("DOMContentLoaded", ()=> {
+    cardRender();
+})
 function fetchData(path=1){
     url = `http://localhost:3000/images/${path}`;
     fetch(url)
@@ -80,3 +80,4 @@ function fetchData(path=1){
     .catch(err => (`Error: ${err}`));
 };
 fetchData()
+

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Woofing those bugs away",
-      "likes": 0,
+      "likes": 14,
       "image": "./assets/coder-dog.png",
       "comments": [
         {
@@ -25,6 +25,11 @@
           "id": 4,
           "imageId": 1,
           "content": "is it a chihuahua?"
+        },
+        {
+          "id": 5,
+          "imageId": 1,
+          "content": "stickers"
         }
       ]
     }
@@ -49,6 +54,11 @@
       "id": 4,
       "imageId": 1,
       "content": "is it a chihuahua?"
+    },
+    {
+      "id": 5,
+      "imageId": 1,
+      "content": "stickers"
     }
   ]
 }
